@@ -1,0 +1,23 @@
+<h1>COUNT Page</h1>
+
+<a href = "{% url 'home' %}"> Start Again </a>
+
+
+<h1> Your text is:</h1>
+<h4> {{text}} </h2>
+
+<h2> "The number of the words included in your text are: {{length}}"
+
+
+
+<h2> "Sorted word occurencies are below:" </h2>
+<br>
+
+<h2>
+{% for word , count in worddict %}
+
+'{{word}}' : {{count}}  times
+<br/>
+{% endfor%}
+</h2>
+
